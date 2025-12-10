@@ -32,24 +32,4 @@ jobs:
           polaris_server_url: ${{ vars.POLARIS_URL }}
           polaris_access_token: ${{ secrets.POLARIS_ACCESS_TOKEN }}
           ### ASSESSMENT TYPES
-          polaris_assessment_types: SCA  # Comma-separated list: SAST,SCA,DAST
-
-
-          ### SCAN CONFIGURATION: Uncomment below to enable
-          # polaris_waitForScan: true # Wait for scan completion before proceeding
-
-          ### Mark build status if policy violating issues are found
-          # mark_build_status: failure # Set to success, failure, or skip
-
-          ### Uncomment below configuration if Bridge diagnostic files needs to be uploaded
-          # include_diagnostics: false
-
-          ### GITHUB TOKEN: Uncomment below to enable
-          # github_token: ${{ secrets.GITHUB_TOKEN }} # Required when PR comments or sarif reports enabled
-
-          ### SCANNING: Optional fields
-          # polaris_prComment_enabled: false
-
-          ### SARIF report parameters
-          # polaris_reports_sarif_create: false # Create SARIF report and upload it as artifact
-          # polaris_upload_sarif_report: false # Upload SARIF report in GitHub Advanced Security tab
+          polaris_assessment_types: SAST,SCA  # Comma-separated list: SAST,SCA,DAST
